@@ -7,7 +7,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
+    /* min-height: 100vh; */
 }
 
 h1,
@@ -27,6 +27,13 @@ p {
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+.weather{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
 }
 
 .current-weather,
@@ -66,6 +73,9 @@ p {
     cursor: pointer;
 }
 
+.search button:hover {
+    background-color: #45a049;
+}
 
 .hourly-forecast,
 .daily-forecast {
@@ -87,4 +97,8 @@ p {
     border-radius: 8px;
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
     text-align: center;
+}
+
+.copyright {
+    color: #666;
 }
