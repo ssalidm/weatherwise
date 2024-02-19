@@ -19,11 +19,13 @@ function fetchWeather(city) {
 function displayCurrentWeather(data) {
     const currentWeatherDiv = document.querySelector('.current-weather');
     currentWeatherDiv.innerHTML = `
-        <h2>${data.name}</h2>
-        <p>${data.weather[0].description}</p>
-        <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">
-        <p>Temperature: ${data.main.temp} °C</p>
-        <p>Min: ${data.main.temp_min} °C, Max: ${data.main.temp_max} °C</p>
+        <h2 class='city-name'>${data.name}, ${data.sys.country}</h2>
+        <div class='weather-icon'>
+            <img src="http://openweathermap.org/img/wn/${data.weather[0].icon}@2x.png">      
+            <p class='temp-now'>${Math.round(data.main.temp)} °C</p>
+        </div>
+        <p class='weather-desc'>${data.weather[0].description}</p>
+        <p><span class='min-temp'>Min: ${Math.round(data.main.temp_min)} °C</span> - <span class='max-temp'>Max: ${Math.round(data.main.temp_max)} °C</span></p>
     `;
 }
 
