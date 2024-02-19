@@ -1,10 +1,22 @@
 const apiKey = '52b588f119ce2c0784f394f66d3fa3b9'; 
 const searchButton = document.getElementById('searchButton');
+const searchForm = document.getElementById('searchForm');
 const cityInput = document.getElementById('cityInput');
+
+
+searchForm.addEventListener('submit', (event) => {
+    event.preventDefault(); // Prevent default form submission behavior
+    const city = cityInput.value;
+    fetchWeather(city); 
+    // Clear the input field
+    cityInput.value = '';
+});
 
 searchButton.addEventListener('click', () => {
     const city = cityInput.value;
     fetchWeather(city);
+    // Clear the input field
+    cityInput.value = '';
 });
 
 function fetchWeather(city) {

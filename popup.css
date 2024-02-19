@@ -1,5 +1,6 @@
 body {
     font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
     background-color: #f0f0f0;
     background: linear-gradient(to bottom, #e0f0ff 0%, #f0ffff 100%);
@@ -12,7 +13,7 @@ body {
 h1,
 h2 {
     font-weight: 600;
-    margin-bottom: 10px;
+    margin-bottom: 0px;
 }
 
 p {
@@ -34,9 +35,10 @@ p {
 
 .container {
     background-color: #fff;
-    padding: 20px;
+    padding: 10px 25px 25px;
     border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(to bottom, #e0f0ff 0%, #f0ffff 100%) !important;
     text-align: center;
 }
 
@@ -54,7 +56,8 @@ p {
     margin-bottom: 10px;
     padding: 20px;
     border-radius: 8px;
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    /* box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15); */
+    border: 1px solid #e0e0e094;
 }
 
 .weather-icon{
@@ -62,7 +65,6 @@ p {
     justify-content: center;
     align-items: center;
 }
-
 
 .temp-now{
     font-size: 40px;
@@ -89,34 +91,42 @@ p {
     color: #c9504a;
 }
 
-
 .search {
     margin-bottom: 20px;
 }
 
 .search input[type="text"] {
-    width: 250px;
+    width: 220px;
     padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    border: 0 solid #ccc;
+    border: 1px solid #e0e0e094;
+
+    border-radius: 8px 0 0 8px;
     font-size: 16px;
 }
 
+.search input[type="text"]:focus {
+    outline: none;
+    border-color: #c9504a;
+    box-shadow: 0 0 5px rgba(255, 89, 0, 0.808);
+}
+
 .search button {
-    background-color: #4CAF50;
+    background-color: #12514c;
     border: none;
     color: white;
     padding: 10px 20px;
+    margin-left: -4px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
-    border-radius: 5px;
+    border-radius: 0 8px 8px 0px;
     cursor: pointer;
 }
 
 .search button:hover {
-    background-color: #45a049;
+    background-color: #196f68;
 }
 
 .hourly-forecast,
